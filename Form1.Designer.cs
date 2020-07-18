@@ -1,6 +1,6 @@
 ﻿namespace MicrophoneSpeakerTest
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -63,7 +63,7 @@
             this.waveViewer1.TabIndex = 2;
             this.waveViewer1.WaveStream = null;
             // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,8 +71,8 @@
             this.Controls.Add(this.waveViewer1);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnPlay);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmMain";
+            this.Text = "Microphone Speaker Test";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
 

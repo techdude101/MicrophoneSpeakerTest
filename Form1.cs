@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace MicrophoneSpeakerTest
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace MicrophoneSpeakerTest
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            waveFileReader = new NAudio.Wave.WaveFileReader("C:\\Users\\Tech\\Downloads\\funny-voices-daniel_simon.wav");
+            //waveFileReader = new NAudio.Wave.WaveFileReader("C:\\Users\\Tech\\Downloads\\funny-voices-daniel_simon.wav");
 
             sourceStream = new NAudio.Wave.WaveIn();
             sourceStream.DeviceNumber = 0;
@@ -42,13 +42,12 @@ namespace MicrophoneSpeakerTest
 
             sourceStream.StartRecording();
 
-            //soundOut.Init(new NAudio.Wave.WaveChannel32(waveFileReader));
-            //soundOut.Play();
+            soundOut.Play();
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            //soundOut.Stop();
+            soundOut.Stop();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

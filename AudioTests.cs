@@ -11,7 +11,7 @@ namespace MicrophoneSpeakerTest
 {
     class AudioTests
     {
-        public static String[] tests = new String[] {"Microphone", "Speaker - Left", "Speaker - Right" };
+        public static String[] tests = new String[] {"Microphone Available", "Speaker - Left", "Speaker - Right" };
         public static Boolean SpeakerTest(int channel)
         {
             String wavFile = "";
@@ -33,7 +33,7 @@ namespace MicrophoneSpeakerTest
             return false;
         }
 
-        public static Boolean MicrophoneTest(int deviceId)
+        public static Boolean MicrophoneAvailableTest(int deviceId)
         {
             NAudio.Wave.WaveIn sourceStream = new NAudio.Wave.WaveIn();
             sourceStream.DeviceNumber = deviceId;

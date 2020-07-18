@@ -28,15 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnTest2 = new System.Windows.Forms.Button();
             this.btnTest3 = new System.Windows.Forms.Button();
             this.btnTest1 = new System.Windows.Forms.Button();
+            this.chrtWaveForm = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.chrtWaveForm)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTest2
             // 
             this.btnTest2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTest2.Location = new System.Drawing.Point(171, 174);
+            this.btnTest2.Location = new System.Drawing.Point(24, 195);
             this.btnTest2.Name = "btnTest2";
             this.btnTest2.Size = new System.Drawing.Size(243, 51);
             this.btnTest2.TabIndex = 3;
@@ -47,7 +54,7 @@
             // btnTest3
             // 
             this.btnTest3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTest3.Location = new System.Drawing.Point(171, 249);
+            this.btnTest3.Location = new System.Drawing.Point(24, 270);
             this.btnTest3.Name = "btnTest3";
             this.btnTest3.Size = new System.Drawing.Size(243, 51);
             this.btnTest3.TabIndex = 4;
@@ -58,7 +65,7 @@
             // btnTest1
             // 
             this.btnTest1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTest1.Location = new System.Drawing.Point(171, 99);
+            this.btnTest1.Location = new System.Drawing.Point(24, 120);
             this.btnTest1.Name = "btnTest1";
             this.btnTest1.Size = new System.Drawing.Size(243, 51);
             this.btnTest1.TabIndex = 5;
@@ -66,11 +73,41 @@
             this.btnTest1.UseVisualStyleBackColor = true;
             this.btnTest1.Click += new System.EventHandler(this.btnTest1_Click);
             // 
+            // chrtWaveForm
+            // 
+            chartArea3.AxisX.LabelStyle.Enabled = false;
+            chartArea3.AxisX.LineColor = System.Drawing.Color.Transparent;
+            chartArea3.AxisX.MajorGrid.Enabled = false;
+            chartArea3.AxisY.LabelStyle.Enabled = false;
+            chartArea3.AxisY.LineColor = System.Drawing.Color.Transparent;
+            chartArea3.AxisY.MajorGrid.Enabled = false;
+            chartArea3.Name = "ChartArea1";
+            this.chrtWaveForm.ChartAreas.Add(chartArea3);
+            legend3.Enabled = false;
+            legend3.Name = "Legend1";
+            this.chrtWaveForm.Legends.Add(legend3);
+            this.chrtWaveForm.Location = new System.Drawing.Point(289, 120);
+            this.chrtWaveForm.Name = "chrtWaveForm";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chrtWaveForm.Series.Add(series3);
+            this.chrtWaveForm.Size = new System.Drawing.Size(323, 201);
+            this.chrtWaveForm.TabIndex = 6;
+            this.chrtWaveForm.Text = "chart1";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.chrtWaveForm);
             this.Controls.Add(this.btnTest1);
             this.Controls.Add(this.btnTest3);
             this.Controls.Add(this.btnTest2);
@@ -83,6 +120,7 @@
             this.Text = "Microphone Speaker Test";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chrtWaveForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -91,6 +129,8 @@
         private System.Windows.Forms.Button btnTest2;
         private System.Windows.Forms.Button btnTest3;
         private System.Windows.Forms.Button btnTest1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chrtWaveForm;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
